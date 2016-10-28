@@ -44,7 +44,7 @@ function drawAll() {
         .attr("class","bar")
         // .attr("fill", "limegreen")
         .attr("fill", function(d,i) { return colorScale(d.x) })
-        .attr("x", function(d) { return xPos(d.x)+10 })
+        .attr("x", function(d) { return xPos(d.x)+5 })
         .attr("height", 0)
         .attr("y", function(d,i) { return height-pady })
         .attr("width", barWidth)
@@ -86,13 +86,13 @@ function drawAll() {
 
     canvas.append("text")
         .attr("text-anchor","middle")
-        .attr("transform","translate("+padx/2+","+height/2+")rotate(-90)")
+        .attr("transform","translate("+0+","+height/2+")rotate(-90)")
         .attr("font-family", "Tahoma,Arial,sans-serif")
         .text("Frequency");
 
     canvas.append("text")
         .attr("text-anchor","middle")
-        .attr("transform","translate("+width/2+","+(height+pady/2)+")")
+        .attr("transform","translate("+width/2+","+(height-pady/10)+")")
         .attr("font-family", "Tahoma,Arial,sans-serif")
         .text("Value");
 
