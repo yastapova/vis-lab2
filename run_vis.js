@@ -33,7 +33,6 @@ var canvas = d3.select("div")
 d3.csv("communities_crime_pca.csv", function(data) {
     allData = data;
     cols = Object.keys(d3.values(data)[0]);
-    console.log(cols);
 
     d3.select("select").selectAll("option")
         .data(cols)
